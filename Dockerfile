@@ -11,10 +11,10 @@ RUN pip install -U pymorphy2
 RUN pip install -U pymorphy2-dicts-ru
 RUN pip install -U chainer keras theano h5py
 
-ENV TF_BINARY_URL https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.11.0rc2-cp35-cp35m-linux_x86_64.whl
+ENV TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.12.1-cp35-cp35m-linux_x86_64.whl
 RUN pip install --upgrade $TF_BINARY_URL
 
-RUN pip install -U matplotlib beautifulsoup4 lxml pymongo
+RUN pip install -U matplotlib beautifulsoup4 lxml pymongo mongoengine requests
 RUN pip install -U statsmodels seaborn
 
 # https://github.com/ipython/ipython/issues/7062
